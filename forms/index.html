@@ -12,12 +12,12 @@
   <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-lg">
     <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">User Information Form</h2>
 
-    <form action="#" class="space-y-5">
+    <form action="#" class="space-y-5" method="">
 
       <!-- First Name -->
       <div>
-        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-        <input type="text" id="firstName" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <!-- <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label> -->
+        <input type="text" id="firstName" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" required placeholder="Enter FirstName" pattern="/^[a-z]{1,10}$/">
       </div>
 
       <!-- Last Name -->
@@ -29,7 +29,7 @@
       <!-- Email -->
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input type="email" id="email" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <input type="email" id="email" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
       </div>
 
       <!-- Password -->
@@ -41,19 +41,19 @@
       <!-- Phone Number -->
       <div>
         <label for="phoneNumber" class="block text-sm font-medium text-gray-700">Phone Number</label>
-        <input type="tel" id="phoneNumber" minlength="10" maxlength="10" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <input type="tel" id="phoneNumber" minlength="10" maxlength="10" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" pattern="/^[6-9][0-9]{9}$/">
       </div>
 
       <!-- Age -->
       <div>
         <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
-        <input type="number" id="age" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <input type="number" id="age" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" min="1">
       </div>
 
       <!-- URL -->
       <div>
         <label for="url" class="block text-sm font-medium text-gray-700">Website</label>
-        <input type="url" id="url" placeholder="https://example.com" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <input type="url" id="url" placeholder="https://achieversit.com" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" readonly>
       </div>
 
       <!-- Search -->
@@ -84,6 +84,60 @@
       <div>
         <label for="month" class="block text-sm font-medium text-gray-700">Select the Month</label>
         <input type="month" id="month" class="w-full mt-1 px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+
+       <!-- Radio Buttons (Choose One) -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Gender</label>
+        <div class="flex gap-4 mt-1">
+          <label><input type="radio" name="gender" value="male" class="mr-2"> Male</label>
+          <label><input type="radio" name="gender" value="female" class="mr-2"> Female</label>
+          <label><input type="radio" name="gender" value="other" class="mr-2"> Other</label>
+        </div>
+      </div>
+
+      <!-- Checkbox (Multiple Selections) -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Skills</label>
+        <div class="flex gap-4 mt-1">
+          <label><input type="checkbox" name="skills" value="html" class="mr-2"> HTML</label>
+          <label><input type="checkbox" name="skills" value="css" class="mr-2"> CSS</label>
+          <label><input type="checkbox" name="skills" value="js" class="mr-2"> JavaScript</label>
+        </div>
+      </div>
+
+      <!-- Color Picker -->
+      <div>
+        <label for="color" class="block text-sm font-medium text-gray-700">Favorite Color</label>
+        <input type="color" id="color" class="mt-1 w-16 h-10 border rounded-md">
+      </div>
+
+      <!-- File Upload -->
+      <div>
+        <label for="fileUpload" class="block text-sm font-medium text-gray-700">Upload Resume</label>
+        <input type="file" id="fileUpload" class="mt-1">
+      </div>
+
+      <!-- Image Button (acts like submit with an image) -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Image Button</label>
+        <input type="image" src="https://via.placeholder.com/100x40.png?text=Click" alt="Submit as Image" class="mt-2 border rounded">
+      </div>
+
+      <!-- Range Slider -->
+      <div>
+        <label for="range" class="block text-sm font-medium text-gray-700">Satisfaction Level</label>
+        <input type="range" id="range" min="0" max="100" step="10" class="w-full mt-1">
+      </div>
+
+      <!-- Reset Button (Clears the form) -->
+      <div>
+        <input type="reset" value="Reset Form" class="w-full bg-gray-400 text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-500 cursor-pointer">
+      </div>
+
+      <!-- Normal Button -->
+      <div>
+        <input type="button" value="Login!" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-700 cursor-pointer">
       </div>
 
       <!-- Submit -->
