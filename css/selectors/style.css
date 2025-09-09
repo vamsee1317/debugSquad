@@ -1,0 +1,83 @@
+/* 
+
+    CSS Selectors : 
+
+    - Basic Selectors
+        - Tag Selector -    targets HTML elements by their name
+        - Class Selector -  targets elements with a specific class
+        - ID Selector -     targets a unique element with a specific ID
+
+    - Combinators
+        - Descendant Combinator -  targets elements that are descendants of a specified element
+        - Child Combinator -       targets elements that are direct children of a specified element
+        - Adjacent Sibling Combinator -  targets an element that is directly after a specified element
+        - General Sibling Combinator -  targets all siblings of a specified element that follow it
+
+    - Pseudo-Selectors
+        - Pseudo-Classes
+        - Pseudo-Elements
+    
+    - Special Selectors
+        - Attribute Selectors - targets elements based on their attributes and attribute values
+        - Universal Selector - selects all elements
+        - Grouping Selectors - groups multiple selectors to apply the same styles
+
+
+*/
+
+
+/* Universal Selector : (*)    */
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tag Selector - ( elementName ) */
+
+h1{
+    color: darkblue;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px;
+}
+section{
+    border: 2px solid blue;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #b3b1b1;
+}
+/* Class Selector - ( . ) */
+
+.tagline{
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.highlight{
+    background-color: yellow;
+    font-size: larger;
+}
+
+.special{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Id Selector - ( # ) */
+#unique-text{
+    color: blue;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Group Selector - ,  */
+
+h2, h3, p {
+    margin-bottom: 10px; 
+    color: darkred;
+}
