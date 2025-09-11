@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination Selectors</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Parent element -->
+    <div class="parent">
+        <h2 class="parent-title">Parent Title</h2>
+
+        <!-- Child of parent -->
+        <p class="child-para">Direct child paragraph of parent</p>
+
+        <!-- Descendant (inside parent but nested deeper) -->
+        <div class="descendant-box">
+            <section>
+                <p class="descendant-text">I am a descendant inside parent</p>
+                <p class="descendant-text">I am a descendant inside parent</p>
+                <p class="descendant-text">I am a descendant inside parent</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Adjacent sibling of parent -->
+    <div class="adjacent-sibling">
+        <p class="adjacent-para">I am the immediate next sibling of parent</p>
+    </div>
+
+    <!-- General sibling of parent -->
+    <div class="general-sibling">
+        <p class="general-para">I am another sibling of parent (not immediate)</p>
+    </div>
+
+    <div class="general-sibling">
+        <p class="general-para">Another general sibling of parent</p>
+    </div>
+
+
+    <section>
+        <p>Lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        <p>Lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        <p>Lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        <p>Lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        <p>Lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+    </section>
+
+
+
+
+    <div class="general-sibling">
+        <p class="general-para">Another general sibling of parent</p>
+    </div>
+
+</body>
+
+</html>

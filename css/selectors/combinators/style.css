@@ -1,0 +1,43 @@
+/* Combination Selectors 
+
+    Inside Parent Element :
+
+        Descendant Selector : space
+        Child Selector : >
+
+    Outside Parent Element :
+
+        Adjacent Sibling Selector : +
+        General Sibling Selector : ~
+
+*/
+
+
+/* Descendant Selector */
+
+ .parent p {
+    color: blue;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* Child Selector */
+
+.descendant-box section>p {
+    color: green;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* Adjacent Sibling Selector */
+
+
+.parent ~ div{
+    color: red;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: lightgrey;
+}
