@@ -1,0 +1,68 @@
+/* 
+
+    Box Model CSS : 
+
+    Box model is a fundamental concept in CSS that describes the rectangular boxes generated for elements in the document tree. It consists of four areas: content, padding, border, and margin.
+
+
+    Content :   This is the innermost part of the box where text and images appear. The size of the content area can be controlled using properties like width and height.
+
+    Padding :   This is the space between the content and the border. It creates space inside the box, around the content. The padding can be set using properties like padding-top, padding-right, padding-bottom, and padding-left, or using the shorthand property padding.
+
+    Border :    This is the area that wraps around the padding (if any) and content. The border can be styled using properties like border-width, border-style, and border-color, or using the shorthand property border.
+
+    Margin :    This is the outermost area that creates space between the element and other elements on the page. Margins can be set using properties like margin-top, margin-right, margin-bottom, and margin-left, or using the shorthand property margin.
+
+
+*/
+
+
+.productCard{
+    width: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.productCard:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+.productCard img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.productCard h2{
+    font-size: 20px;
+    margin: 10px 0;
+
+}
+
+.productCard p{
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0px;
+}
+
+.productCard button{
+    padding: 8px 24px;
+    width: 100% ;
+    border: none;
+    background-color: #050505;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.productCard button:hover{
+    background-color: #333;
+}
+
