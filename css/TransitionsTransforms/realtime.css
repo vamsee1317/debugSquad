@@ -1,0 +1,218 @@
+/* ===== Global ===== */
+:root {
+  --primary: #3498db;
+  --accent: #2ecc71;
+  --dark: #333;
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+}
+h1, h2 { color: #333; margin-top: 30px; }
+
+/* ===== 1. Navigation Menu ===== */
+.nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.nav-item {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.nav-item:hover { transform: scale(1.1); }
+
+/* ===== 2. Button Press ===== */
+.btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.btn:hover { transform: scale(0.95); }
+.btn.alt { background: #e67e22; }
+
+/* ===== 3. Card Hover Lift ===== */
+.card {
+  width: 200px;
+  height: 120px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== 4. Flex Image Gallery (10 Pexels images) ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.gallery-item {
+  width: clamp(240px, 30%, 360px);
+  aspect-ratio: 3 / 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img { transform: scale(1.2); }
+.gallery-item figcaption {
+  position: absolute;
+  right: 8px; bottom: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* ===== 5. Modal Popup ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.modal.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: min(90vw, 420px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== 6. Hamburger Menu ===== */
+.hamburger { width: 36px; cursor: pointer; }
+.bar {
+  height: 4px;
+  background: var(--dark);
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.open .bar1 { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open .bar2 { opacity: 0; }
+.hamburger.open .bar3 { transform: rotate(-45deg) translate(6px, -6px); }
+
+/* ===== 7. Tooltip ===== */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+.tooltip {
+  position: absolute;
+  bottom: 125%; left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #000;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.tooltip-container:hover .tooltip {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ===== 8. Loading Spinner ===== */
+.loader {
+  border: 5px solid #eee;
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== 9. Accordion ===== */
+.accordion-btn {
+  padding: 10px 20px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: #f1c40f;
+  padding: 0 15px;
+  border-radius: 6px;
+}
+.accordion.open .accordion-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
+/* ===== 10. Flip Card ===== */
+.card-flip {
+  perspective: 1000px;
+  width: 150px; height: 150px;
+}
+.card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-flip:hover .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+.card-front { background: var(--primary); }
+.card-back { background: var(--accent); transform: rotateY(180deg); }

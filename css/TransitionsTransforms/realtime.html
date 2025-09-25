@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transforms & Transitions - 10 Real World Examples</title>
+  <link rel="stylesheet" href="./realtime.css"/>
+</head>
+<body>
+  <h1>CSS Transforms & Transitions - Real Production Examples</h1>
+
+  <!-- 1. Navigation Menu -->
+  <h2 id="nav">1. Navigation Menu Hover</h2>
+  <nav class="nav">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">About</a>
+    <a href="#" class="nav-item">Services</a>
+    <a href="#" class="nav-item">Contact</a>
+  </nav>
+
+  <!-- 2. Button Press -->
+  <h2 id="btn">2. Button Press Feedback</h2>
+  <button class="btn">Click Me</button>
+
+  <!-- 3. Card Hover Lift -->
+  <h2 id="card">3. Card Hover Lift (3D Effect)</h2>
+  <div class="card">Hover Me</div>
+
+  <!-- 4. Flex Image Gallery (10 images from Pexels) -->
+  <h2 id="gallery">4. Flex Image Gallery (Zoom on Hover)</h2>
+  <div class="gallery">
+    <!-- Reference image (yours) -->
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/25309925/pexels-photo-25309925.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Pexels reference image 25309925"
+        loading="lazy"
+      />
+      <figcaption>Ref</figcaption>
+    </figure>
+
+    <!-- Nine more Pexels images in the same CDN format -->
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="City bridge sunset"
+        loading="lazy"
+      />
+      <figcaption>01</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/1408197/pexels-photo-1408197.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Mountains and lake"
+        loading="lazy"
+      />
+      <figcaption>02</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Lightning sky"
+        loading="lazy"
+      />
+      <figcaption>03</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Vintage car"
+        loading="lazy"
+      />
+      <figcaption>04</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/349758/pexels-photo-349758.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Lavender field"
+        loading="lazy"
+      />
+      <figcaption>05</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Forest road"
+        loading="lazy"
+      />
+      <figcaption>06</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/349727/pexels-photo-349727.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Flower close-up"
+        loading="lazy"
+      />
+      <figcaption>07</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Lake reflection"
+        loading="lazy"
+      />
+      <figcaption>08</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        src="https://images.pexels.com/photos/274754/pexels-photo-274754.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600&h=400"
+        alt="Foggy mountains"
+        loading="lazy"
+      />
+      <figcaption>09</figcaption>
+    </figure>
+  </div>
+
+  <!-- 5. Modal Popup -->
+  <h2 id="modal">5. Modal Popup Entrance</h2>
+  <button id="openModal" class="btn alt">Open Modal</button>
+  <div class="modal" id="modalEl">
+    <div class="modal-content">
+      <p>This is a modal</p>
+      <button id="closeModal" class="btn">Close</button>
+    </div>
+  </div>
+
+  <!-- 6. Hamburger Menu -->
+  <h2 id="hamburger">6. Hamburger Menu Animation</h2>
+  <div class="hamburger" id="hamburgerEl">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </div>
+
+  <!-- 7. Tooltip -->
+  <h2 id="tooltip">7. Tooltip Animation</h2>
+  <div class="tooltip-container">
+    Hover Me
+    <span class="tooltip">I am a tooltip!</span>
+  </div>
+
+  <!-- 8. Loading Spinner -->
+  <h2 id="spinner">8. Loading Spinner</h2>
+  <div class="loader"></div>
+
+  <!-- 9. Accordion -->
+  <h2 id="accordion">9. Accordion</h2>
+  <div class="accordion" id="accordionEl">
+    <button class="accordion-btn">Toggle Content</button>
+    <div class="accordion-content">
+      <p>This is some hidden accordion content.</p>
+    </div>
+  </div>
+
+  <!-- 10. Flip Card -->
+  <h2 id="flip">10. Flip Card</h2>
+  <div class="card-flip">
+    <div class="card-inner">
+      <div class="card-front">Front</div>
+      <div class="card-back">Back</div>
+    </div>
+  </div>
+
+  <script>
+    // Modal JS
+    const modal = document.getElementById("modalEl");
+    document.getElementById("openModal").onclick = () => modal.classList.add("open");
+    document.getElementById("closeModal").onclick = () => modal.classList.remove("open");
+
+    // Hamburger toggle
+    document.getElementById("hamburgerEl").onclick = (e) => {
+      e.currentTarget.classList.toggle("open");
+    };
+
+    // Accordion toggle
+    document.querySelector(".accordion-btn").onclick = (e) => {
+      e.target.parentElement.classList.toggle("open");
+    };
+  </script>
+</body>
+</html>

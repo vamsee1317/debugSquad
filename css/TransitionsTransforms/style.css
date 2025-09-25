@@ -1,0 +1,143 @@
+/* 
+==============================
+ CSS Transforms & Transitions
+==============================
+
+1. Transforms:
+   - Visually change an element’s position, size, shape, or orientation.
+   - Types: rotate, scale, skew, translate, or combine them.
+
+2. Transitions:
+   - Make property changes smooth & animated instead of instant.
+   - Controlled by duration, delay, and timing-function.
+*/
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background: #3498db;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Default transition for demo */
+  transition: all 1.5s ease;
+}
+
+/* ----------------
+   TRANSFORMS
+-----------------*/
+
+/* Rotate: Rotates an element in 2D/3D space */
+.rotate:hover {
+  transform: rotate(45deg); /* Try rotateX / rotateY for 3D */
+}
+
+/* Scale: Increases or decreases size */
+.scale:hover {
+  transform: scale(1.5); /* Scale up 150% */
+}
+
+/* Skew: Slants element along X or Y axis */
+.skew:hover {
+  transform: skewX(-25deg);
+}
+
+/* Translate: Moves element along X/Y axis */
+.translate:hover {
+  transform: translateY(80px); /* Move down */
+}
+
+/* Combo: Multiple transforms together */
+.combo:hover {
+  transform: rotate(20deg) scale(1.3) translateX(50px);
+}
+
+/* ----------------
+   TRANSITIONS
+-----------------*/
+
+/* Base state for transitions demo */
+.linear, .ease, .ease-in, .ease-out, .ease-in-out,
+.step-start, .step-end, .custom-cubic {
+  background: #2ecc71;
+  transform: translateX(0); /* Initial position */
+}
+
+/* All will move to right on hover */
+.linear:hover,
+.ease:hover,
+.ease-in:hover,
+.ease-out:hover,
+.ease-in-out:hover,
+.step-start:hover,
+.step-end:hover,
+.custom-cubic:hover {
+  transform: translateX(250px);
+}
+
+/* Timing Functions */
+/* Linear: constant speed */
+.linear {
+  transition-timing-function: linear;
+}
+
+/* Ease: default, starts slow → fast → slow */
+.ease {
+  transition-timing-function: ease;
+}
+
+/* Ease-in: starts slow, speeds up */
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+/* Ease-out: starts fast, slows down */
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+/* Ease-in-out: starts slow → speeds up → ends slow */
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+/* Step-start: jumps instantly at beginning */
+.step-start {
+  transition-timing-function: step-start;
+}
+
+/* Step-end: jumps instantly at the end */
+.step-end {
+  transition-timing-function: step-end;
+}
+
+/* Custom cubic-bezier curve
+   Format: cubic-bezier(x1, y1, x2, y2)
+   Each value between 0 and 1
+   Allows fully custom speed curves
+*/
+.custom-cubic {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* "Springy" effect */
+}
